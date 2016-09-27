@@ -1,0 +1,56 @@
+
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top;
+    margin: 10px;
+    padding: 0;
+}
+
+div.naviDummy{
+  width: 100%;
+  height: 60px;
+  background-color: none;
+  position: static;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 20px);
+  overflow: hidden;
+  background-color: #333333;
+  position: fixed;
+}
+
+li {
+  float: left;
+}
+
+ul #kontakt{
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+li a.active {
+  background-color: #009933;
+}
+li a:hover:not(.active) {
+  background-color: #111111;
+}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+    ul.topnav {position: static; width: 100%;}
+    ul #kontakt {float: none;}
+    div.naviDummy {display: none}
+}
